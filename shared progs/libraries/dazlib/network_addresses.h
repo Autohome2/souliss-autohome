@@ -2,6 +2,7 @@
 
 #define network_address_1   	          80 		      //   The Gateway
 #define gateway_node_address              network_address_1
+#define network_address1				  0x0050
 
 #define network_address_2                 81                  //   display console
 #define dn_node_address                   network_address_2
