@@ -3,6 +3,7 @@
 /**********************************************************************************/
 
 #define W1_callback_slot					1
+#define W1_Temp_setval_valid				51
 
 #define N3_W1_PumpLogic1                     36      		// pump output              , DHW tank Primary DHW exchanger pump(local on N2)
 #define W1_dhw_exch_pump_slot          		N3_W1_PumpLogic1
@@ -61,5 +62,5 @@ U8 W1_Temp_setval_slot[14] ={0,N3_W1_TempSensorLogic1s,N3_W1_TempSensorLogic2s,N
 								N3_W1_TempSensorLogic5s,N3_W1_TempSensorLogic6s,0,0,
 								0,0,0,0};
 
-U8 W1_Active_Temp_setval_slot[14] = 0,1,1,1,0,1,1,0,0,0,0,0,0};
+U8 W1_Active_Temp_setval_slot[14] = {0,1,1,1,0,1,1,0,0,0,0,0,0};
 								// array showing which slots are being used

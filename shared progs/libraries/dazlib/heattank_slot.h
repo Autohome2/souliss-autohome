@@ -82,6 +82,9 @@ U8 H1_Temp_actual_slot[14] ={0,N3_H1_TempSensorLogic1,N3_H1_TempSensorLogic2,N3_
 U8 H1_Temp_setval_slot[14] ={0,N3_H1_TempSensorLogic1s,N3_H1_TempSensorLogic2s,N3_H1_TempSensorLogic3s,N3_H1_TempSensorLogic4s,
 							  0,0,0,0,
 							  0,0,0,0};
+							  
+U8 H1_Active_Temp_setval_slot[14] = {0,1,1,1,1,0,0,0,0,0,0,0,0};
+								// array showing which slots are being used							  
 
 int H1_flowval[5] ={0,0,0,0,0};
 							  

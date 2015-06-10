@@ -57,11 +57,11 @@ if (dhwflow != W1_dhwflowswitch[2])                    // check if value is NOT 
     
  // update pump1 status
  //Serial.println(" dhwpump ");
-int dhw1pump = pOutput(dhw_node_num,W1_dhw1pump_slot);
-if(dhw1pump != W1_dhw1pump[2])
+int dhw_exch_pump = pOutput(dhw_node_num,W1_dhw_exch_pump_slot);
+if(dhw_exch_pump != W1_dhw1pump[2])
     {
       //update status
-     W1_dhw1pump[2] = dhw1pump;
+     W1_dhw1pump[2] = dhw_exch_pump;
     drawpump(W1_dhw1pump[0],W1_dhw1pump[1],W1_dhw1pump[2]);                  //dhw 1st exchanger pump
     } 
    
