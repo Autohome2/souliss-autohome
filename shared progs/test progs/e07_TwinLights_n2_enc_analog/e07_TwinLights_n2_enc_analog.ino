@@ -5,6 +5,9 @@
     if receive a command from the push button. Control from Android is also 
     available.
         
+    it also demonstrates the reading of the memeory map on the gateway using pOutput and pOutputAsFloat.
+    the analog value read is on the peer and is slowly incremented by the gateway via a RemoteInputs call        
+        
     Run this code on one of the following boards:
       - Arduino Ethernet (W5100) 
       - Arduino with Ethernet Shield (W5100)
@@ -40,8 +43,8 @@ uint8_t ip_gateway[4]  = {192, 168, 0, 1};
 #define PEERLIGHT           0               // This identify the number of the logic on peer node
 #define MYANALOG            1
 
-float analogvalue  =  0.00;
-U8 temp_data_out[3];
+//float analogvalue  =  0.00;
+//U8 temp_data_out[3];
 float temperature  = 0.00;
 
 
@@ -82,8 +85,6 @@ void loop()
         FAST_50ms() {   // We process the logic and relevant input and output every 50 milliseconds
             if(DigIn(22, Souliss_T1n_ToggleCmd, MYLIGHT))                                                // Use the pin2 as ON/OFF toggle command
                 RemoteInput(Gateway_address, PEERLIGHT, Souliss_T1n_ToggleCmd);             // and replicate the command on the peer node
-                  
-
                 
             Logic_SimpleLight(MYLIGHT);                         // Drive the relay coil as per command
            

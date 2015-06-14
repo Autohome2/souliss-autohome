@@ -5,13 +5,16 @@
     if receive a command from the push button. Control from Android is also 
     available.
         
+    it also demonstrates the reading of the memeory map on the gateway using pOutput and pOutputAsFloat.
+    the analog value read is on the peer and is slowly incremented by the gateway via a RemoteInputs call
+    
     Run this code on one of the following boards:
       - Arduino Ethernet (W5100) 
       - Arduino with Ethernet Shield (W5100)
       
     As option you can run the same code on the following, just changing the
     relevant configuration file at begin of the sketch
-      - Arduino with ENC28J60 Ethernet Shield
+    !!  - Arduino with ENC28J60 Ethernet Shield *** there are issues with the persistance data being reliably read/correct using this ethernet on the gateway **
       - Arduino with W5200 Ethernet Shield
       - Arduino with W5500 Ethernet Shield
       
